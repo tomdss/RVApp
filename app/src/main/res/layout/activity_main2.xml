@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity2"
+    android:padding="20dp">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:max="100"/>
+
+    <LinearLayout
+        android:id="@+id/llResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvNum1"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tvNum2"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tvNum3"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+    <Button
+        android:id="@+id/btnNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        android:text="select"
+        />
+
+    <LinearLayout
+        android:id="@+id/llTX"
+        app:layout_constraintTop_toBottomOf="@id/btnNumber"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="50dp">
+
+        <TextView
+            android:id="@+id/btnT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="25dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_button_select"
+            android:enabled="false"/>
+
+        <TextView
+            android:id="@+id/btnX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="25dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_button_select"
+            android:layout_marginStart="20dp"
+            android:enabled="false"
+            />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnReset"
+        app:layout_constraintTop_toBottomOf="@id/llTX"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_reset"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
